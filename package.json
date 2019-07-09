@@ -1,10 +1,11 @@
 {
-  "name": "mp-colorui",
+  "name": "@caedman/mp-colorui",
   "version": "0.1.4",
   "description": "MP ColorUI 是一款基于 Taro 框架并且联合 Color-UI CSS 库开发的多端 UI 组件库（目前仅支持小程序端）",
   "main": "dist/index.js",
   "main:h5": "dist/h5/index.js",
   "types": "./@types/index.d.ts",
+  "pubic":"true",
   "files": [
     "dist",
     "@types"
@@ -22,7 +23,7 @@
     "dev:rn": "npm run build:rn -- --watch",
     "lint": "eslint ./src --fix",
     "test": "jest --coverage",
-    "build": "TARO_BUILD_TYPE=ui taro build --ui",
+    "build": "cross-env TARO_BUILD_TYPE=ui taro build --ui",
     "publish:beta": "npm run build & npm publish --tag=beta",
     "publish:production": "npm run build & npm publish"
   },
@@ -32,7 +33,6 @@
       "git add"
     ]
   },
-  "author": "liangyin",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
@@ -79,5 +79,17 @@
     "simulant": "^0.2.2",
     "sinon": "^7.3.2",
     "typescript": "^3.5.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranglang/mp-colorui.git"
+  },
+  "keywords": [
+    "taro"
+  ],
+  "author": "rang",
+  "bugs": {
+    "url": "https://github.com/ranglang/mp-colorui/issues"
+  },
+  "homepage": "https://github.com/ranglang/mp-colorui#readme"
 }
